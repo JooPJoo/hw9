@@ -1,0 +1,26 @@
+int ledPin13 = 13;
+int buttonPin4 = 4;
+int led2 = 7;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(ledPin13, OUTPUT);
+  pinMode(buttonPin4, INPUT_PULLUP);
+  
+  pinMode(led2, OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  if (digitalRead(buttonPin4) == LOW) {
+    digitalWrite(ledPin13, HIGH);
+    digitalWrite(led2, HIGH);
+    
+  }
+
+  else {
+    digitalWrite(ledPin13, LOW);
+    digitalWrite(led2, LOW);
+  }
+}
